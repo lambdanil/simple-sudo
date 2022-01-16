@@ -11,8 +11,9 @@ password = "password"
 
 arguments = list(sys.argv)
 arguments.remove(arguments[0])
-if "-c" in arguments:
-    arguments.remove("-c")
+if len(arguments)>1:
+    if arguments[0] == "-c":
+        arguments.remove("-c")
 global strcmd
 strcmd = str(" ".join(arguments))
 
